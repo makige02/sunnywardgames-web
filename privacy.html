@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="description" content="swg-web" />
+    <title>Privacy Policy</title>
+    <!-- jqueryのCDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <!-- ナビの表示・非表示 -->
+    <script>
+      $(function () {
+        const ham = $('#hamburger, .close, .pagelink')
+        const nav = $('.page-nav')
+        ham.on('click', function () {
+          nav.toggleClass('toggle')
+        })
+      })
+    </script>
+    <!-- scrollTop リンクのズレ補正 -->
+    <script>
+      $(function () {
+        var headerHight = 70 //ヘッダーの高さ
+        $('a[href^=#]').click(function () {
+          var href = $(this).attr('href')
+          var target = $(href == '#' || href == '' ? 'html' : href)
+          var posi = target.offset().top - headerHight //ヘッダーの高さ分位置をずらす
+          $('html, body').animate({ scrollTop: posi }, 500, 'swing')
+          return false
+        })
+      })
+    </script>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header id="header">
+      <div class="header pc_only">
+        <nav class="flex-col">
+          <div class="h_left">
+            <h1><a href="index.html">SunnyWardGames</a></h1>
+          </div>
+          <ul class="pc_header flex-col">
+            <li class="pagelink left-border">
+              <a href="index.html">ホーム</a>
+            </li>
+            <li class="pagelink left-border">
+              <a href="works.html">公開中のゲーム</a>
+            </li>
+            <li class="pagelink left-border">
+              <a href="privacy.html">プライバシーポリシー</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header sp_only">
+        <nav class="page-nav">
+          <ul>
+            <li class="close"><span></span></li>
+            <li class="pagelink"><a href="index.html">ホーム</a></li>
+            <li class="pagelink"><a href="works.html">公開中のゲーム</a></li>
+            <li class="pagelink">
+              <a href="privacy.html">プライバシーポリシー</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="flex-col">
+          <div class="" id="hamburger">
+            <span></span>
+          </div>
+          <div class="h_center">
+            <h1><a href="index.html">SunnyWardGames</a></h1>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- End header Section -->
+    <div class="height70px"></div>
+
+    <!-- privacy policy Section -->
+    <section class="contents" id="privacy">
+      <div class="container">
+        <p>
+          このプライバシーポリシー（以下、「本プライバシーポリシー」といいます）は、SunnyWardGamesが提供するスマートフォン用アプリケーション（以下、「当アプリ」といいます）における個人情報の取扱いを定めたものです。本プライバシーポリシーに同意いただけない場合は、当アプリをご利用いただけません。
+        </p>
+        <h1>個人情報の利用</h1>
+        <p>
+          お客さまよりお預かりした個人情報の利用目的は以下の通りとし、それ以外の用途には使用いたしません。
+          <br />
+          ・当アプリに関連するサービス（クラウドデータ保存、ランキング機能など）の提供
+          <br />
+          ・当アプリの利用に関する統計調査
+          <br />
+          ・お客様への適切な広告配信
+        </p>
+        <h1>情報収集モジュールの利用</h1>
+        <p>
+          SunnyWardGamesは、当アプリの利用に関する統計調査およびお客様に適切な広告表示をするために、第三者による以下の情報収集モジュールを利用することがあります。情報収集モジュールにより収集されたデータは、各提供者のプライバシーポリシーに基づいて管理されます。詳細については、各提供者の利用規約およびプライバシーポリシーをご確認ください。
+        </p>
+        <div class="module_conts">
+          <p>
+            1.Firebase Analytics
+            <br />
+            提供者 Google, Inc.
+            <br />
+            利用目的 利用に関する統計調査
+            <br />
+            プライバシーポリシー https://policies.google.com/privacy
+          </p>
+          <p>
+            <br />
+            2.AdMob
+            <br />
+            提供者 Google, Inc.
+            <br />
+            利用目的 お客様に適した広告配信のため
+            <br />
+            プライバシーポリシー（広告）
+            https://policies.google.com/technologies/ads
+          </p>
+        </div>
+        <h1>個人情報の開示</h1>
+        <p>
+          SunnyWardGamesは、お客さまよりお預かりした個人情報を適切に管理し、次のいずれかに該当する場合を除き、個人情報を第三者に開示いたしません。
+          <br />
+          ・お客さまの同意がある場合
+          <br />
+          ・法令、条例その他関係当局の要請等に基づき開示する場合
+        </p>
+        <h1>プライバシーポリシーの改訂</h1>
+        <p>
+          SunnyWardGamesは、本プライバシーポリシーの内容を予告なしに改定する事があります。本プライバシーポリシーに重要な変更がある場合は、本サイト上または当アプリでお知らせします。本プライバシーポリシーが変更された後に当アプリを利用する場合、当該変更に同意したものとみなされます。当該変更に同意いただけない場合は、当アプリをご利用いただくことはできません。
+        </p>
+        <h1>
+          お問い合せ
+        </h1>
+        <p>
+          当社の個人情報の取扱に関するお問い合せは下記までご連絡ください。
+          <br />
+          sunny.ward.dev@gmail.com
+          <br />
+          2021/1/22更新
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <!-- Footer Section -->
+    <footer id="footer">
+      <div class="footer container-fluid">
+        <div class="sns">
+          <ul>
+            <li>
+              <a href="works.html">
+                公開中のゲーム
+              </a>
+            </li>
+            <li>
+              <a href="privacy.html">
+                プライバシーポリシー
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="sns">
+          <ul>
+            <li>
+              <a
+                href="https://twitter.com/swgames_jp"
+                class="hover_p"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="img/square-twitter.svg"
+                  alt="twitter"
+                  class="hover_c"
+                />
+                twitter
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.instagram.com/sunnywardgames/"
+                class="hover_p"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="img/instagram.svg" alt="instagram" class="hover_c" />
+                instagram
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://play.google.com/store/apps/developer?id=SunnyWardGames"
+                class="hover_p"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="img/google-play.svg"
+                  alt="googleplay"
+                  class="hover_c"
+                />
+                Android
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://apps.apple.com/jp/developer/yoku-takahashi/id1078480151"
+                class="hover_p"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="img/app-store-ios.svg"
+                  alt="appstore"
+                  class="hover_c"
+                />
+                iOS
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="copyright">
+          <p>Copyright ©2022 SunnyWardGames All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- scroll Top -->
+    <div id="pagetop">
+      <a href="#top"><i class="fas fa-angle-up"></i></a>
+    </div>
+    <!-- Script -->
+    <script src="./app.js"></script>
+    <script type="text/javascript"></script>
+  </body>
+</html>

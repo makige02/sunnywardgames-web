@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+
+    <meta name="description" content="swg-web" />
+    <title>20221009</title>
+    <!-- jqueryのCDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <!-- ナビの表示・非表示 -->
+    <script>
+      $(function () {
+        const ham = $('#hamburger, .close, .pagelink')
+        const nav = $('.page-nav')
+        ham.on('click', function () {
+          nav.toggleClass('toggle')
+        })
+      })
+    </script>
+    <!-- scrollTop リンクのズレ補正 -->
+    <script>
+      $(function () {
+        var headerHight = 70 //ヘッダーの高さ
+        $('a[href^=#]').click(function () {
+          var href = $(this).attr('href')
+          var target = $(href == '#' || href == '' ? 'html' : href)
+          var posi = target.offset().top - headerHight //ヘッダーの高さ分位置をずらす
+          $('html, body').animate({ scrollTop: posi }, 500, 'swing')
+          return false
+        })
+      })
+    </script>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header id="header">
+      <div class="header pc_only">
+        <nav class="flex-col">
+          <div class="h_left">
+            <h1><a href="../index.html">SunnyWardGames</a></h1>
+          </div>
+          <ul class="pc_header flex-col">
+            <li class="pagelink left-border">
+              <a href="../index.html">ホーム</a>
+            </li>
+            <li class="pagelink left-border">
+              <a href="../works.html">公開中のゲーム</a>
+            </li>
+            <li class="pagelink left-border">
+              <a href="../privacy.html">プライバシーポリシー</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header sp_only">
+        <nav class="page-nav">
+          <ul>
+            <li class="close"><span></span></li>
+            <li class="pagelink"><a href="../index.html">ホーム</a></li>
+            <li class="pagelink"><a href="../works.html">公開中のゲーム</a></li>
+            <li class="pagelink">
+              <a href="privacy.html">プライバシーポリシー Policy</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="flex-col">
+          <div class="" id="hamburger">
+            <span></span>
+          </div>
+          <div class="h_center">
+            <h1><a href="../index.html">SunnyWardGames</a></h1>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- End header Section -->
+
+    <div class="height70px"></div>
+
+    <!-- Post Section -->
+    <section class="contents mtb30">
+      <div class="container">
+        <p class="post_date">2022.10.09</p>
+        <p class="post_ttl">新作RPGをリリース予定</p>
+        <p class="post_cont">
+            自動戦闘ハクスラRPG「FuzzyGrave」の事前予約を開始しました。
+            <br />
+            Android, iOSともに秋頃の公開を予定しています。
+            <blockquote class="twitter-tweet">
+              <p lang="ja" dir="ltr">
+                【Android】自動戦闘ハクスラRPG「FuzzyGrave」の事前予約を開始！
+                <a href="https://t.co/Kx2M1nhxKG">https://t.co/Kx2M1nhxKG</a>
+              </p>
+              &mdash; 【公式】予約トップ10 NEWS bot (@yoyakutop10news)
+              <a
+                href="https://twitter.com/yoyakutop10news/status/1575017748845187072?ref_src=twsrc%5Etfw"
+              >
+                September 28, 2022
+              </a>
+            </blockquote>
+            <script
+              async
+              src="https://platform.twitter.com/widgets.js"
+              charset="utf-8"
+            ></script>
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+      <div class="footer container-fluid">
+        <div class="sns">
+          <ul>
+            <li>
+              <a href="../works.html">
+                公開中のゲーム
+              </a>
+            </li>
+            <li>
+              <a href="../privacy.html">
+                プライバシーポリシー
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="sns">
+          <ul>
+            <li>
+              <a
+                href="https://twitter.com/swgames_jp"
+                class="hover_p"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="../img/square-twitter.svg"
+                  alt="twitter"
+                  class="hover_c"
+                />
+                twitter
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.instagram.com/sunnywardgames/"
+                class="hover_p"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="../img/instagram.svg" alt="instagram" class="hover_c" />
+                instagram
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://play.google.com/store/apps/developer?id=SunnyWardGames"
+                class="hover_p"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="../img/google-play.svg"
+                  alt="googleplay"
+                  class="hover_c"
+                />
+                Android
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://apps.apple.com/jp/developer/yoku-takahashi/id1078480151"
+                class="hover_p"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="../img/app-store-ios.svg"
+                  alt="appstore"
+                  class="hover_c"
+                />
+                iOS
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="copyright">
+          <p>Copyright ©2022 SunnyWardGames All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- scroll Top -->
+    <div id="pagetop">
+      <a href="#top"><img src="../img/chevron-up-solid.svg" alt="" /></a>
+    </div>
+    <!-- Script -->
+    <script src="./app.js"></script>
+    <script type="text/javascript"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+      let mySwiper = new Swiper('.heroslider', {
+        // オプションの設定
+        loop: true,
+
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+        autoplay: {
+          delay: 6000,
+        },
+        speed: 2000,
+      })
+    </script>
+   
+    <script src="modal.js"></script>
+  </body>
+</html>

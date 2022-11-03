@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="description" content="swg-web" />
+    <title>Works</title>
+    <!-- jqueryのCDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <!-- ナビの表示・非表示 -->
+    <script>
+      $(function () {
+        const ham = $('#hamburger, .close, .pagelink')
+        const nav = $('.page-nav')
+        ham.on('click', function () {
+          nav.toggleClass('toggle')
+        })
+      })
+    </script>
+    <!-- scrollTop リンクのズレ補正 -->
+    <script>
+      $(function () {
+        var headerHight = 70
+        $('a[href^=#]').click(function () {
+          var href = $(this).attr('href')
+          var target = $(href == '#' || href == '' ? 'html' : href)
+          var posi = target.offset().top - headerHight
+          $('html, body').animate({ scrollTop: posi }, 500, 'swing')
+          return false
+        })
+      })
+    </script>
+    <script>
+      $(window).on('load', function () {
+        var url = $(location).attr('href')
+        if (url.indexOf('#') != -1) {
+          var anchor = url.split('#')
+          var target = $('#' + anchor[anchor.length - 1])
+          if (target.length) {
+            var pos = Math.floor(target.offset().top) - 70
+            $('html, body').animate({ scrollTop: pos }, 100, 'linear')
+          }
+        }
+      })
+    </script>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header id="header">
+      <div class="header pc_only">
+        <nav class="flex-col">
+          <div class="h_left">
+            <h1><a href="index.html">SunnyWardGames</a></h1>
+          </div>
+          <ul class="pc_header flex-col">
+            <li class="pagelink left-border">
+              <a href="index.html">ホーム</a>
+            </li>
+            <li class="pagelink left-border">
+              <a href="works.html">公開中のゲーム</a>
+            </li>
+            <li class="pagelink left-border">
+              <a href="privacy.html">プライバシーポリシー</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header sp_only">
+        <nav class="page-nav">
+          <ul>
+            <li class="close"><span></span></li>
+            <li class="pagelink"><a href="index.html">ホーム</a></li>
+            <li class="pagelink"><a href="works.html">公開中のゲーム</a></li>
+            <li class="pagelink">
+              <a href="privacy.html">プライバシーポリシー</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="flex-col">
+          <div class="" id="hamburger">
+            <span></span>
+          </div>
+          <div class="h_center">
+            <h1><a href="index.html">SunnyWardGames</a></h1>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- End header Section -->
+    <div class="height70px"></div>
+
+    <!-- Works Section -->
+    <section class="contents" id="works">
+      <div class="container">
+        <div class="appbox">
+          <img
+            class="appicon_image"
+            src="img/icon_quickrogue.png"
+            alt="quickrogue"
+          />
+
+          <div class="appinfo">
+            <div class="app_content">
+              <span class="app_name">Quick Rogue</span>
+              <p>
+                装備を強化して、地下1000階を目指そう！
+                <br />
+                放置要素のあるダンジョンRPGです
+              </p>
+            </div>
+          </div>
+
+          <div class="app-links">
+            <div class="app-itune-link">
+              <a
+                class="ios_link"
+                href="https://apps.apple.com/jp/app/quickrogue/id1078480152"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="img/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+                />
+              </a>
+            </div>
+            <div class="app-android-link">
+              <a
+                class="android_link"
+                href="https://play.google.com/store/apps/details?id=jp.blogspot.sunnywardgames.quickrogue"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  alt="Google Play で手に入れよう"
+                  src="https://play.google.com/intl/ja/badges/static/images/badges/ja_badge_web_generic.png"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="app-footer"></div>
+        </div>
+        <div class="appbox" id="ncrypt">
+          <img
+            class="appicon_image"
+            src="img/icon_ncrypt.jpeg"
+            alt="cyberspaceNcrypt"
+          />
+          <div class="appinfo">
+            <div class="app_content">
+              <span class="app_name">
+                電脳空間 Ncrypt（サイバースペース エンクリプト）
+              </span>
+              <p>
+                電脳空間に迷い込んだ異世界の住人たちが
+                <br />
+                扉を目指して旅をするフルオートバトル x ハクスラRPG！
+              </p>
+            </div>
+          </div>
+          <div class="app-links">
+            <div class="app-itune-link">
+              <a
+                class="ios_link"
+                href="https://apps.apple.com/jp/app/id1547101468"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="img/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+                />
+              </a>
+            </div>
+            <div class="app-android-link">
+              <a
+                class="android_link"
+                href="https://play.google.com/store/apps/details?id=jp.blogspot.sunnywardgames.ncrypt&hl=ja&gl=US"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  alt="Google Play で手に入れよう"
+                  src="https://play.google.com/intl/ja/badges/static/images/badges/ja_badge_web_generic.png"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="app-footer"></div>
+        </div>
+        <div class="appbox">
+          <img
+            class="appicon_image"
+            src="img/icon_quickcrawler.png"
+            alt="quickcrawler"
+          />
+
+          <div class="appinfo">
+            <div class="app_content">
+              <span class="app_name">
+                Quick Crawler
+              </span>
+              <p>
+                QuickRogue（クイックローグ）の続編
+                <br />
+                再び目指そう地下1000階
+              </p>
+            </div>
+          </div>
+
+          <div class="app-links">
+            <div class="app-itune-link">
+              <a
+                class="ios_link"
+                href="https://apps.apple.com/jp/app/quickcrawler/id1170760426"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="img/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+                />
+              </a>
+            </div>
+
+            <div class="app-android-link">
+              <a
+                class="android_link"
+                href="https://play.google.com/store/apps/details?id=jp.blogspot.sunnywardgames.quickcrawler&amp;hl=ja"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  alt="Google Play で手に入れよう"
+                  src="https://play.google.com/intl/ja/badges/static/images/badges/ja_badge_web_generic.png"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="app-footer"></div>
+        </div>
+        <div class="appbox" id="scratch">
+          <img
+            class="appicon_image"
+            src="img/icon_scratch.png"
+            alt="Scratch Brigade"
+          />
+
+          <div class="appinfo">
+            <div class="app_content">
+              <span class="app_name">
+                Scratch Brigade
+              </span>
+              <p>
+                パーティを編成して挑むハクスラRPG
+                <br />
+                セミオートバトルでサクサク遊べます
+              </p>
+            </div>
+          </div>
+
+          <div class="app-links">
+            <div class="app-itune-link">
+              <a
+                class="ios_link"
+                href="https://apps.apple.com/jp/app/scratch-brigade/id1448584597"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="img/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+                />
+              </a>
+            </div>
+            <!-- <div class="app-android-link">
+              <a
+                class="android_link"
+                href="https://play.google.com/store/apps/details?id=jp.blogspot.sunnywardgames.scratchbrigade&amp;hl=ja"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  alt="Google Play で手に入れよう"
+                  src="https://play.google.com/intl/ja/badges/static/images/badges/ja_badge_web_generic.png"
+                />
+              </a>
+            </div> -->
+          </div>
+          <div class="app-footer"></div>
+        </div>
+
+        <div class="appbox" id="glowhunter">
+          <img class="appicon_image" src="img/icon_gh.png" alt="Glow Hunter" />
+          <div class="appinfo">
+            <div class="app_content">
+              <span class="app_name">Glow Hunter</span>
+              <p>
+                敵を倒して素材ザクザク、インフレ系RPG
+                <br />
+                <br />
+              </p>
+            </div>
+          </div>
+          <div class="app-links">
+            <div class="app-itune-link">
+              <a
+                class="ios_link"
+                href="https://apps.apple.com/jp/app/glowhunter/id1278579849?mt=8"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="img/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+                />
+              </a>
+            </div>
+            <div class="app-android-link">
+              <a
+                class="android_link"
+                href="https://play.google.com/store/apps/details?id=jp.blogspot.sunnywardgames.glowhunter&amp;hl=ja"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  alt="Google Play で手に入れよう"
+                  src="https://play.google.com/intl/ja/badges/static/images/badges/ja_badge_web_generic.png"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="app-footer"></div>
+        </div>
+        <div class="appbox">
+          <img
+            class="appicon_image"
+            src="img/icon_iom.png"
+            alt="Island Of Miasma（瘴気の島）"
+          />
+          <div class="appinfo">
+            <div class="app_content">
+              <span class="app_name">Island Of Miasma（瘴気の島）</span>
+              <p>
+                放置ハクスラダンジョンRPG
+                <br />
+                酒場で仲間を集め冒険にでかけよう
+              </p>
+            </div>
+          </div>
+
+          <div class="app-links">
+            <div class="app-itune-link">
+              <a
+                class="ios_link"
+                href="https://apps.apple.com/jp/app/island-of-miasma/id1247752971?mt=8"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="img/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+                />
+              </a>
+            </div>
+
+            <div class="app-android-link">
+              <a
+                class="android_link"
+                href="https://play.google.com/store/apps/details?id=jp.blogspot.sunnywardgames.islandofmiasma&amp;hl=ja"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  alt="Google Play で手に入れよう"
+                  src="https://play.google.com/intl/ja/badges/static/images/badges/ja_badge_web_generic.png"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="app-footer"></div>
+        </div>
+        <div class="appbox" id="pocket">
+          <img
+            class="appicon_image"
+            src="img/icon_pocket.png"
+            alt="Pocket Crawler"
+          />
+          <div class="appinfo">
+            <div class="app_content">
+              <span class="app_name">Pocket Crawler</span>
+              <p>
+                ドット絵のハクスラ系アクションRPG
+                <br />
+                <br />
+              </p>
+            </div>
+          </div>
+
+          <div class="app-links">
+            <div class="app-itune-link">
+              <a
+                class="ios_link"
+                href="https://apps.apple.com/jp/app/pocketcrawler/id1362396788?mt=8"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="img/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+                />
+              </a>
+            </div>
+            <div class="app-android-link">
+              <a
+                class="android_link"
+                href="https://play.google.com/store/apps/details?id=jp.blogspot.sunnywardgames.pocketcrawler&amp;hl=ja"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  alt="Google Play で手に入れよう"
+                  src="https://play.google.com/intl/ja/badges/static/images/badges/ja_badge_web_generic.png"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="app-footer"></div>
+        </div>
+        <div class="appbox">
+          <img
+            class="appicon_image"
+            src="img/icon_grass.png"
+            alt="草原のローグライク"
+          />
+          <div class="appinfo">
+            <div class="app_content">
+              <span class="app_name">草原のローグライク</span>
+              <p>
+                草刈りしながら突き進む
+                <br />
+                シンプルやり込み系ローグライク
+              </p>
+            </div>
+          </div>
+          <div class="app-links">
+            <div class="app-itune-link">
+              <a
+                class="ios_link"
+                href="https://apps.apple.com/jp/app/%E8%8D%89%E5%8E%9F%E3%81%AE%E3%83%AD%E3%83%BC%E3%82%B0%E3%83%A9%E3%82%A4%E3%82%AF/id1422604238?mt=8"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="img/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+                />
+              </a>
+            </div>
+            <div class="app-android-link">
+              <a
+                class="android_link"
+                href="https://play.google.com/store/apps/details?id=jp.blogspot.sunnywardgames.grasslandrogue&amp;hl=ja"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  alt="Google Play で手に入れよう"
+                  src="https://play.google.com/intl/ja/badges/static/images/badges/ja_badge_web_generic.png"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="app-footer"></div>
+        </div>
+        <div class="appbox" id="monsterworks">
+          <img
+            class="appicon_image"
+            src="img/Icon_monsterWorks.png"
+            alt="Monster Works"
+          />
+          <div class="appinfo">
+            <div class="app_content">
+              <span class="app_name">Monster Works</span>
+              <p>
+                ダンジョンかたづけパズルゲーム
+                <br />
+                難易度は未知数！
+              </p>
+            </div>
+          </div>
+
+          <div class="app-links">
+            <div class="app-itune-link">
+              <a
+                class="ios_link"
+                href="https://apps.apple.com/jp/app/monsterworks/id1093717936"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="img/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+                />
+              </a>
+            </div>
+            <div class="app-android-link">
+              <a
+                class="android_link"
+                href="https://play.google.com/store/apps/details?id=jp.blogspot.sunnywardgames.monsterworks&hl=en_US&gl=US"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  alt="Google Play で手に入れよう"
+                  src="https://play.google.com/intl/ja/badges/static/images/badges/ja_badge_web_generic.png"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="app-footer"></div>
+        </div>
+        <div class="appbox" id="obake">
+          <img
+            class="appicon_image"
+            src="img/icon_obake.png"
+            alt="おばけのなぞとき"
+          />
+          <div class="appinfo">
+            <div class="app_content">
+              <span class="app_name">おばけのなぞとき</span>
+              <p>
+                色々な仕掛けの謎解きゲーム
+                <br />
+                ぜんぶ解けるかな
+              </p>
+            </div>
+          </div>
+          <div class="app-links">
+            <div class="app-itune-link">
+              <a
+                class="ios_link"
+                href="https://apps.apple.com/jp/app/%E3%81%8A%E3%81%B0%E3%81%91%E3%81%AE%E3%81%AA%E3%81%9E%E3%81%A8%E3%81%8D/id1455714568?mt=8"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="img/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+                />
+              </a>
+            </div>
+            <div class="app-android-link">
+              <a
+                class="android_link"
+                href="https://play.google.com/store/apps/details?id=jp.blogspot.sunnywardgames.obakepuzzle&amp;hl=ja"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  alt="Google Play で手に入れよう"
+                  src="https://play.google.com/intl/ja/badges/static/images/badges/ja_badge_web_generic.png"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="app-footer"></div>
+        </div>
+        <div class="appbox">
+          <img
+            class="appicon_image"
+            src="img/icon_ham.png"
+            alt="脱出ゲーム にげろ！ハムスター"
+          />
+          <div class="appinfo">
+            <div class="app_content">
+              <span class="app_name">脱出ゲーム にげろ！ハムスター</span>
+              <p>
+                脱力系脱出ゲーム
+                <br />
+                ハムスターになって家から逃げよう
+              </p>
+            </div>
+          </div>
+          <div class="app-links">
+            <div class="app-itune-link">
+              <a
+                class="ios_link"
+                href="https://apps.apple.com/jp/app/%E8%84%B1%E5%87%BA%E3%82%B2%E3%83%BC%E3%83%A0-%E3%81%AB%E3%81%92%E3%82%8D-%E3%83%8F%E3%83%A0%E3%82%B9%E3%82%BF%E3%83%BC/id1493038601?mt=8"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="img/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+                />
+              </a>
+            </div>
+            <div class="app-android-link">
+              <a
+                class="android_link"
+                href="https://play.google.com/store/apps/details?id=jp.blogspot.sunnywardgames.hamexit&amp;hl=ja"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  alt="Google Play で手に入れよう"
+                  src="https://play.google.com/intl/ja/badges/static/images/badges/ja_badge_web_generic.png"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="app-footer"></div>
+        </div>
+        <div class="appbox">
+          <img
+            class="appicon_image"
+            src="img/icon_rocket.png"
+            alt="Rockets ひまつぶしに避けゲー"
+          />
+          <div class="appinfo">
+            <div class="app_content">
+              <span class="app_name">Rockets ひまつぶしに避けゲー</span>
+              <p>
+                変なロケットを集めよう
+                <br />
+                障害物を避けて長生きしよう
+              </p>
+            </div>
+          </div>
+          <div class="app-links">
+            <div class="app-android-link">
+              <a
+                class="android_link"
+                href="https://play.google.com/store/apps/details?id=jp.blogspot.sunnywardgames&amp;hl=ja"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  alt="Google Play で手に入れよう"
+                  src="https://play.google.com/intl/ja/badges/static/images/badges/ja_badge_web_generic.png"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="app-footer"></div>
+        </div>
+        <!-- <div class="appbox">
+          <img class="appicon_image" src="img/.png" alt="" />
+          <div class="appinfo">
+            <div class="app_content">
+              <span class="app_name"></span>
+              <p>
+                <br />
+              </p>
+            </div>
+          </div>
+
+          <div class="app-links">
+            <div class="app-itune-link">
+              <a
+                class="ios_link"
+                url=""
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="img/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+                />
+              </a>
+            </div>
+
+            <div class="app-android-link">
+              <a
+                class="android_link"
+                url=""
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  alt="Google Play で手に入れよう"
+                  src="https://play.google.com/intl/ja/badges/static/images/badges/ja_badge_web_generic.png"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="app-footer"></div>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <!-- Footer Section -->
+    <footer id="footer">
+      <div class="footer container-fluid">
+        <div class="sns">
+          <ul>
+            <li>
+              <a href="works.html">
+                公開中のゲーム
+              </a>
+            </li>
+            <li>
+              <a href="privacy.html">
+                プライバシーポリシー
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="sns">
+          <ul>
+            <li>
+              <a
+                href="https://twitter.com/swgames_jp"
+                class="hover_p"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="img/square-twitter.svg"
+                  alt="twitter"
+                  class="hover_c"
+                />
+                twitter
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.instagram.com/sunnywardgames/"
+                class="hover_p"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="img/instagram.svg" alt="instagram" class="hover_c" />
+                instagram
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://play.google.com/store/apps/developer?id=SunnyWardGames"
+                class="hover_p"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="img/google-play.svg"
+                  alt="googleplay"
+                  class="hover_c"
+                />
+                Android
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://apps.apple.com/jp/developer/yoku-takahashi/id1078480151"
+                class="hover_p"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="img/app-store-ios.svg"
+                  alt="appstore"
+                  class="hover_c"
+                />
+                iOS
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="copyright">
+          <p>Copyright ©2022 SunnyWardGames All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- scroll Top -->
+    <div id="pagetop">
+      <a href="#top"><i class="fas fa-angle-up"></i></a>
+    </div>
+    <!-- Script -->
+    <script src="./app.js"></script>
+    <script type="text/javascript"></script>
+  </body>
+</html>
